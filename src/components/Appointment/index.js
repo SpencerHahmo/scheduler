@@ -26,7 +26,7 @@ export default function Appointment(props) {
     };
 
     transition(SAVING);
-    Promise.resolve(props.bookInterview(props.id, interview))
+    return props.bookInterview(props.id, interview)
       .then(() => transition(SHOW))
   }
 

@@ -41,10 +41,10 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment
     };
-    
+
     return axios
       .put(`http://localhost:8001/api/appointments/${id}`, appointment)
-      .then(() => setState({ ...state, appointments }))
+      .then(() => setState({ ...state, appointments }));
   };
 
   function cancelInterview(id) {
@@ -57,10 +57,10 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment
     };
-    
+
     return axios
       .delete(`http://localhost:8001/api/appointments/${id}`)
-      .then(() => setState({ ...state, appointments }))
+      .then(() => setState({ ...state, appointments }));
   };
 
   const schedule = appointments.map(appointment => {

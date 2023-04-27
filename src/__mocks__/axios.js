@@ -64,7 +64,6 @@ export default {
     }
 
     if (url === "http://localhost:8001/api/appointments") {
-      /* Resolve appointments data */
       return Promise.resolve({
         status: 200,
         statusText: "OK",
@@ -73,7 +72,6 @@ export default {
     }
 
     if (url === "http://localhost:8001/api/interviewers") {
-      /* Resolve interviewers data */
       return Promise.resolve({
         status: 200,
         statusText: "OK",
